@@ -1,3 +1,14 @@
+/*********************************************************************************
+*  WEB422 – Assignment 1
+*  I declare that this assignment is my own work in accordance with Seneca  Academic Policy.  
+*  No part of this assignment has been copied manually or electronically from any other source
+*  (including web sites) or distributed to other students.
+* 
+*  Name: ___Mohdeep Singh___________________ Student ID: __109600239____________ Date: ___20 Jan 2025_____________
+*  onRender Link: https://web422-assignment-1-vskz.onrender.com
+
+********************************************************************************/ 
+
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 require("dotenv").config(); 
