@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+require("dotenv").config(); 
 
 // Define the schema for a movie
 const movieSchema = new Schema({
@@ -50,7 +51,8 @@ module.exports = class MoviesDB {
   // Initialize the database connection and the Movie model
   initialize(connectionString) {
     return new Promise((resolve, reject) => {
-      const db = mongoose.createConnection(connectionString);
+      const db = mongoose.createConnection(process.env.MONGODB_CONN_STRING);
+      
 
       db.once('error', (err) => {
         reject(err);
