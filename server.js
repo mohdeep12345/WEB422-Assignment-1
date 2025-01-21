@@ -20,7 +20,7 @@ const MoviesDB = require('./modules/moviesDB.js');
 
 const app = express();
 const db = new MoviesDB();
-const HTTP_PORT = process.env.PORT || 8080;
+const HTTP_PORT = process.env.PORT || 10000;
 
 // Middleware
 app.use(cors());
