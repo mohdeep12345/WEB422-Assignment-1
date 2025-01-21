@@ -20,14 +20,14 @@ const MoviesDB = require('./modules/moviesDB.js');
 
 const app = express();
 const db = new MoviesDB();
-const HTTP_PORT = process.env.PORT || 10000;
+const HTTP_PORT = process.env.PORT || 8080;
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 
 // Initialize Database and Start Server
-db.initialize(process.env.MONGODB_CONN_STRING)
+db.initialize("mongodb+srv://rokingmohdeep:passwordmohdeep@cluster1.arjbd.mongodb.net/sample_mflix?retryWrites=true&w=majority")
   .then(() => {
     app.listen(HTTP_PORT, () => {
       console.log(`Server listening on: ${HTTP_PORT}`);

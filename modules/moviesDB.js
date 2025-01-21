@@ -51,7 +51,7 @@ module.exports = class MoviesDB {
   // Initialize the database connection and the Movie model
   initialize(connectionString) {
     return new Promise((resolve, reject) => {
-      const db = mongoose.createConnection(process.env.MONGODB_CONN_STRING);
+      const db = mongoose.createConnection("mongodb+srv://rokingmohdeep:passwordmohdeep@cluster1.arjbd.mongodb.net/sample_mflix?retryWrites=true&w=majority");
       
 
       db.once('error', (err) => {
